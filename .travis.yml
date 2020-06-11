@@ -1,9 +1,6 @@
 language: go
 go:
-- 1.x
-- '1.8'
-- '1.9'
-- 1.10.x
+-1.9
 addons:
   ssh_known_hosts: 182.92.79.110
 before_install:
