@@ -5,8 +5,6 @@ imageMap.txt
 index.log
 index.txt
 
-dist/
-
 # local env files
 .env.local
 .env.*.local
