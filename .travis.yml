@@ -10,6 +10,8 @@ before_install:
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/deploy_rsa
 - ssh-add /tmp/deploy_rsa
+script:
+  - GOARCH=amd64 GOOS=linux go build -o main *.go
 deploy:
   provider: script
   script: bash ./deploy.sh
