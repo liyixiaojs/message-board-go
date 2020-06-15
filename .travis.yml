@@ -14,7 +14,10 @@ script:
   - GOARCH=amd64 GOOS=linux go build -o main *.go
 deploy:
   provider: script
-  script: bash ./deploy.sh
+  script:
+  - scp -o StrictHostKeyChecking=no ./main root@182.92.79.110:~/golang/
+  - scp -o StrictHostKeyChecking=no ./conf.yaml root@182.92.79.110:~/golang/
+  - bash ./deploy.sh
   # script: echo 'Here you go'
   skip_cleanup: true
 branches:
